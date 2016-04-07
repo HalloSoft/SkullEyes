@@ -9,7 +9,7 @@
 #define PINLEFT  2
 #define PINCOUNT 7
 
-#define EPISODE_TIME 30
+#define EPISODE_TIME 45 // in seconds
 
 const unsigned int timebase = 50;
 
@@ -19,8 +19,6 @@ typedef Adafruit_NeoPixel NeoPixel;
 
 NeoPixel rightEye = NeoPixel(PINCOUNT, PINRIGHT, NEO_GRB + NEO_KHZ800);
 NeoPixel leftEye = NeoPixel(PINCOUNT, PINLEFT, NEO_GRB + NEO_KHZ800);
-
-
 
 
 void setup()
@@ -50,7 +48,7 @@ void loop()
 
   delay(5 * timebase);
 
-  evilFade(&leftEye, &rightEye, 30);
+  evilFade(&leftEye, &rightEye, EPISODE_TIME);
 
   delay(5 * timebase);
 }
