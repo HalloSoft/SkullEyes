@@ -9,7 +9,7 @@
 #define PINLEFT  2
 #define PINCOUNT 7
 
-#define EPISODE_TIME 45 // in seconds
+#define EPISODE_TIME 40 // in seconds
 
 const unsigned int timebase = 50;
 

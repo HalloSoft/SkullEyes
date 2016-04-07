@@ -1,5 +1,5 @@
 #include "Episodes.h"
-//#include "Globals.h"
+
 #include "ColorFunctions.h"
 
 
@@ -8,7 +8,7 @@ const unsigned int timebase = 50;
 void hellBlink(NeoPixel* leftEye, NeoPixel* rightEye, ulong duration)
 {
   ulong timeSave = millis();
-  const int millisecons = duration * 1000;
+  const ulong millisecons = duration * 1000;
 
   while (timeSave + millisecons > millis())
   {
@@ -35,7 +35,7 @@ void hellBlink(NeoPixel* leftEye, NeoPixel* rightEye, ulong duration)
 void evilRoll(NeoPixel* leftEye, NeoPixel* rightEye, ulong duration)
 {
   ulong timeSave = millis();
-  const int millisecons = duration * 1000;
+  const ulong millisecons = duration * 1000;
   const unsigned int rotationTimebase = 70;
 
   while (timeSave + millisecons > millis())
@@ -86,7 +86,7 @@ void evilFade(NeoPixel* leftEye, NeoPixel* rightEye, ulong duration)
 {
   ulong timeSave = millis();
   //uint32_t fadeColor = blue;
-  const int millisecons = duration * 1000;
+  const ulong millisecons = duration * 1000;
 
   while (timeSave + millisecons > millis())
   {
@@ -142,7 +142,7 @@ void ghostlyShimmer(NeoPixel* leftEye, NeoPixel* rightEye, ulong duration)
   ulong timeSave = millis();
   byte colorWheel = 0;
   byte helpcounter = 0;
-  const int millisecons = duration * 1000;
+  const ulong millisecons = duration * 1000;
 
   while (timeSave + millisecons > millis())
   {
