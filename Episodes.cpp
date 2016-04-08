@@ -2,6 +2,8 @@
 
 #include "ColorFunctions.h"
 
+#include "Helper.h"
+
 
 const unsigned int timebase = 50;
 
@@ -52,7 +54,7 @@ void evilRoll(NeoPixel* leftEye, NeoPixel* rightEye, ulong duration)
         rightEye->setPixelColor(0, green);
         rightEye->show();
 
-        leftEye->setPixelColor(8 - i, blue);
+        leftEye->setPixelColor(mirror(i), blue);
         leftEye->setPixelColor(0, green);
         leftEye->show();
         delay(rotationTimebase);
@@ -66,7 +68,7 @@ void evilRoll(NeoPixel* leftEye, NeoPixel* rightEye, ulong duration)
         showAll(rightEye, black);
         showAll(leftEye, black);
 
-        rightEye->setPixelColor(8 - i, green);
+        rightEye->setPixelColor(mirror(i), green);
         rightEye->setPixelColor(0, blue);
         rightEye->show();
 

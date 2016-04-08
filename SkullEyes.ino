@@ -1,7 +1,9 @@
 #include <Adafruit_NeoPixel.h>
 #include "Globals.h"
+
 #include "ColorFunctions.h"
 #include "Episodes.h"
+#include "Helper.h"
 
 #include "Callibrate.h"
 
@@ -9,7 +11,7 @@
 #define PINLEFT  2
 #define PINCOUNT 7
 
-#define EPISODE_TIME 40 // in seconds
+#define EPISODE_TIME 60 // in seconds
 
 const unsigned int timebase = 50;
 
@@ -36,21 +38,25 @@ void loop()
   rightEye.setBrightness(50);
   leftEye.setBrightness(50);
 
-  ghostlyShimmer(&leftEye, &rightEye, EPISODE_TIME);
+  //  int pin = 6;
+  //  showLed(&leftEye,pin, green);
+  //  showLed(&rightEye,mirror(pin), green);
 
-  delay(5 * timebase);
-
-  hellBlink(&leftEye, &rightEye, EPISODE_TIME);
-
-  delay(5 * timebase);
-
+  //  ghostlyShimmer(&leftEye, &rightEye, EPISODE_TIME);
+  //
+  //  delay(5 * timebase);
+  //
+  //  hellBlink(&leftEye, &rightEye, EPISODE_TIME);
+  //
+  //  delay(5 * timebase);
+  //
   evilRoll(&leftEye, &rightEye, EPISODE_TIME);
 
   delay(5 * timebase);
-
-  evilFade(&leftEye, &rightEye, EPISODE_TIME);
-
-  delay(5 * timebase);
+  //
+  //  evilFade(&leftEye, &rightEye, EPISODE_TIME);
+  //
+  //  delay(5 * timebase);
 }
 
 
